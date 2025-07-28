@@ -1,0 +1,4 @@
+# re-use PyMuPDF pulled via round1a wheel
+PyMuPDF==1.26.3
+sentence-transformers==2.7.0          # cpu-only, pulls tiny MiniLM
+torch==2.2.1+cpu                      # pre-built CPU wheel
