@@ -1,12 +1,20 @@
-# Round1B: Persona-Based PDF Analysis
 
-Analyzes PDF content for a given persona and job, ranking and summarizing relevant sections.
+# Round1A: PDF Outline Extractor
+
+Extracts section outlines from PDF files and outputs them as JSON.
 
 ## Usage
 
+### Docker
 ```
-python -m round1b.app.cli --persona "Document Manager" --job "Summarize document features" --docs "input" --out "output/output.json"
+docker build --platform linux/amd64 -t outline-extractor .
+docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output --network none outline-extractor
+```
+
+### Local
+```
+python -m round1a.app.cli
 ```
 
 - Place PDFs in the `input/` folder.
-- Results are written to `output/output.json`.
+- JSON results will be in the `output/` folder.
