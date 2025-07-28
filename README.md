@@ -1,8 +1,19 @@
+
 # Glitchnetcult PDF Analysis Toolkit
 
 A toolkit for extracting outlines and analyzing PDF content. Supports Docker and local runs. Place PDFs in `input/`, get JSON results in `output/`. Includes persona/job-based section ranking and summarization. MIT License.
 
 ## Usage
+
+### Python Virtual Environment
+It is recommended to use a virtual environment for local runs:
+```
+python -m venv .venv
+.venv\Scripts\activate  # On Windows
+# or
+source .venv/bin/activate  # On Linux/Mac
+pip install -r requirements.txt
+```
 
 ### Build Docker Image (Round1A)
 ```
