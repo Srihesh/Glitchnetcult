@@ -1,6 +1,12 @@
-### Build
-docker build --platform linux/amd64 -t outline-extractor round1a
+# Round1B: Persona-Based PDF Analysis
 
-### Run (hackathon harness does this automatically)
-docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output \
-           --network none outline-extractor
+Analyzes PDF content for a given persona and job, ranking and summarizing relevant sections.
+
+## Usage
+
+```
+python -m round1b.app.cli --persona "Document Manager" --job "Summarize document features" --docs "input" --out "output/output.json"
+```
+
+- Place PDFs in the `input/` folder.
+- Results are written to `output/output.json`.
